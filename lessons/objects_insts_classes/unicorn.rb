@@ -9,4 +9,13 @@ class Unicorn
 		@name = name_parameter
 		@magic_powers = [] #by default a unicorn has an empty array (list) of magical powers
 	end
+
+	def say_hello
+		puts "Hello my name is #{@name}"
+	end
+
+	def add_power(power)
+		@magic_powers << power
+		#@magical_powers.add(power)
+	end
 end
