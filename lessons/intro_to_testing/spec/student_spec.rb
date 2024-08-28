@@ -1,13 +1,40 @@
-# Add the 2 requires you will need here
+require './lib/student'
+require 'rspec'
 
 
-describe Student do
+describe Student do 
   describe '#initialize' do
     it 'is an instance of student' do
-      # write the code to initialize a new student object
+      student = Student.new('Steve')
+
+      expect(student).to be_a Student
     end
-    # test it has a name
-    # test it has cookies
-    # test it can add cookies
+
+
+    it 'has a name' do 
+      student = Student.new('Susan')
+
+      expect(student.name).to eq('Susan')
+    end
+
+
+    it 'has cookies array' do 
+      student = Student.new('Steve')
+
+      expect(student.liked_cookies).to eq([])
+    end
+
+
+    
+
+  end
+  describe '#add_cookie' do
+    it 'can add cookie to cookie list' do 
+      student = Student.new('Steve')
+      student.add_cookie('chocolate chunk')
+      student.add_cookie('snickerdoodle')
+
+      expect(student.liked_cookies).to eq(['chocolate chunk', 'snickerdoodle'])
+    end
   end
 end

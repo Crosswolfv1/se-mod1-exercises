@@ -10,3 +10,10 @@ suitcase = {
 
 # How can we increase the existing value:
 # 1. Change pants to have a value of 2
+suitcase["jackets"] = 2
+suitcase["shirts"] = 4
+suitcase["shoes"] = 2
+puts suitcase
+
+suitcase["pants"] += 1
+puts suitcase

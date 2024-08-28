@@ -1,3 +1,4 @@
+require 'pry'
 class Hippogriff
 
   attr_reader :name, :color
@@ -6,12 +7,13 @@ class Hippogriff
   def initialize(name, color)
     @name = name
     @color = color
-    moonrocks = []
+    @moonrocks = []
   end
 
   def fly(rock)
     rock.magicalness = true
     @moonrocks.push(rock)
+    
   end
 
   def sack

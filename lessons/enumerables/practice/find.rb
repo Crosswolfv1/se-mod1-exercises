@@ -15,7 +15,7 @@ end
 def no_waldo
     words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
     found = words.find do |word|
-
+        word.contain
       # Your code goes here
 
     end
@@ -87,7 +87,7 @@ def find_first_number_greater_than_20
     # expected return value is 21
 end
 
-# p find_first_seven_letter_word
+p find_first_seven_letter_word
 # p no_waldo
 # p find_waldo
 # p cannot_find_3_letter_words
